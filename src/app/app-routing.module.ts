@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { StudentHomeComponent } from './student-home/student-home.component';
-import { StudentListComponent } from './student-list/student-list.component';
-import { StudentFormComponent } from './student-form/student-form.component';
+import { StudentsHomeComponent } from './students-home/students-home.component';
+import { StudentsListComponent } from './students-list/students-list.component';
+import { StudentsFormComponent } from './students-form/students-form.component';
 
 const routes: Routes = [
   {path:"", redirectTo: "home", pathMatch: "full"},
-  {path:"home", component: StudentHomeComponent},
-  {path:"students", component: StudentListComponent},
-  {path:"add-student-form", component: StudentFormComponent},
+  {path:"home", component: StudentsHomeComponent},
+  {path:"students", component: StudentsListComponent},
+  {path:"add-student-form", component: StudentsFormComponent},
 ];
 
 @NgModule({

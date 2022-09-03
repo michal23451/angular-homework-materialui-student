@@ -5,25 +5,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { StudentHomeComponent } from './student-home/student-home.component';
-import { StudentListComponent } from './student-list/student-list.component';
-import { StudentFormComponent } from './student-form/student-form.component';
-import { StudentServiceComponent } from './student-service/student-service.component';
+
+import { StudentsHomeComponent } from './students-home/students-home.component';
+import { StudentsListComponent } from './students-list/students-list.component';
+import { StudentsFormComponent } from './students-form/students-form.component';
+import { StudentsService } from './students-service/students-service';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    StudentHomeComponent,
-    StudentListComponent,
-    StudentFormComponent,
-    StudentServiceComponent
+    StudentsHomeComponent,
+    StudentsListComponent,
+    StudentsFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [StudentsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
