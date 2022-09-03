@@ -1,0 +1,58 @@
+.app-container{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header{
+  width: 100%;
+  margin-top: 15px;
+}
+
+.app-main{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+ }
+
+ .app-footer{
+  width: 100%;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+ }
+
+.app-left-side{
+  width: 20%;
+  text-align: center;
+  align-items: center;
+  background-color: rgb(155, 155, 155);
+}
+
+.app-left-side div {
+  margin: 25px 0px;
+}
+
+.app-right-side{
+  width: 80%;
+  background-color: rgb(127, 178, 255);
+}
+
+.app-right-content{
+  margin: auto;
+  margin: 50px;
+}
+
+.app-button{
+  margin: 0px;
+  width: 80%;
+}
+
+.app-logo{
+  margin: 15px 0px;
+}
+
+.app-logo-img{
+  width: 100px;
+}
