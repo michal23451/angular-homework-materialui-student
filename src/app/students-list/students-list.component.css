@@ -1,0 +1,10 @@
+.student-list{
+  background-color: var(--color-form-and-table);
+}
+
+.student-table{
+  width: 100%;
+  border: 1px solid var(--color-form-and-table-frame);
+  background-color: var(--color-form-and-table);
+}
+

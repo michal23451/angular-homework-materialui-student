@@ -27,7 +27,7 @@
   width: 20%;
   text-align: center;
   align-items: center;
-  background-color: rgb(155, 155, 155);
+  background-color: var(--color-left-side);
 }
 
 .app-left-side div {
@@ -36,17 +36,18 @@
 
 .app-right-side{
   width: 80%;
-  background-color: rgb(127, 178, 255);
+  background-color: var(--color-right-side);
 }
 
-.app-right-content{
-  margin: auto;
-  margin: 50px;
+.app-right-side div{
+  margin: 30px;
 }
 
 .app-button{
   margin: 0px;
   width: 80%;
+  white-space: pre-wrap !important;
+  line-height: normal;
 }
 
 .app-logo{

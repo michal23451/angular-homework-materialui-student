@@ -13,18 +13,18 @@
       </div>
       <nav>
         <div>
-          <button class="app-button" [routerLink]="['home']">Strona główna</button>
+          <button mat-button  mat-raised-button class="app-button" [routerLink]="['home']">Strona główna</button>
         </div>
         <div>
-          <button class="app-button" [routerLink]="['students']">Lista uczniów</button>
+          <button mat-button  mat-raised-button class="app-button" [routerLink]="['students']">Lista uczniów</button>
         </div>
         <div>
-          <button class="app-button" [routerLink]="['add-student-form']">Formularz rejestracyjny uczniów</button>
+          <button mat-button  mat-raised-button class="app-button" [routerLink]="['add-student-form']">Formularz rejestracyjny uczniów</button>
         </div>
       </nav>
     </div>
     <div class="app-right-side">
-      <div class="app-right-content">
+      <div>
         <router-outlet></router-outlet>
       </div>
     </div>

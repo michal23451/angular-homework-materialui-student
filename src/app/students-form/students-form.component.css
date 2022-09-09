@@ -1,0 +1,21 @@
+.student-form {
+  background-color: var(--color-form-and-table);
+}
+
+.student-form-content{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-form-and-table-frame);
+  background-color: var(--color-form-and-table);
+}
+
+.form-field{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.form-button-row {
+  display: flex;
+  flex-direction: row-reverse;
+}

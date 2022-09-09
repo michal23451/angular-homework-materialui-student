@@ -1,1 +1,41 @@
-<p>students-form works!</p>
+
+
+<mat-card class="student-form">
+  <mat-card-title>Formularz dodawania studentów</mat-card-title>
+  <mat-card-subtitle>Dodaj studenta do bazy studentów</mat-card-subtitle>
+  <mat-card-content class="student-form-content" >
+
+    <mat-form-field appearance="legacy" class="form-field">
+      <mat-label>Imię:</mat-label>
+      <input type="text" matInput placeholder="Imię:" [(ngModel)]="student.name">
+    </mat-form-field>
+
+    <mat-form-field appearance="legacy" class="form-field">
+      <mat-label>Nazwisko:</mat-label>
+      <input type="text" matInput placeholder="Nazwisko:" [(ngModel)]="student.surname">
+    </mat-form-field>
+
+    <mat-form-field appearance="legacy" class="form-field">
+      <mat-label>Data urodzenia:</mat-label>
+      <input matInput [matDatepicker]="picker" [(ngModel)]="student.birthDate">
+      <mat-hint>MM/DD/RRRR</mat-hint >
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="legacy" class="form-field">
+      <mat-label>Numer indeksu:</mat-label>
+      <input type="text" matInput placeholder="Numer indeksu:" [(ngModel)]="student.indexNumber">
+    </mat-form-field>
+
+    <div class="form-button-row">
+      <button class="submit-button" type="button" mat-button mat-raised-button (click)="sendStudent()">
+        Wyślij
+      </button>
+      <button class="clear-button" type="button" mat-button mat-raised-button color="warn" (click)="clearForm()" >
+        Wyczyść
+      </button>
+    </div>
+
+  </mat-card-content>
+</mat-card>
