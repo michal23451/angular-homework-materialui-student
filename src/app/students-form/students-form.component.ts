@@ -1,6 +1,9 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Student, StudentsService } from '../students-service/students-service';
 
+import { MatSnackBar } from '@angular/material/snack-bar';
+
+
 @Component({
   selector: 'app-students-form',
   templateUrl: './students-form.component.html',
@@ -14,7 +17,7 @@ export class StudentsFormComponent implements OnInit {
 
   notification: string|null = null;
 
-  constructor(private studentsService: StudentsService) {
+  constructor(private snackBar: MatSnackBar, private studentsService: StudentsService) {
     this.student = studentsService.getDefautStudentModel();
   }
 
@@ -28,6 +31,12 @@ export class StudentsFormComponent implements OnInit {
     .subscribe({
       next: (data) => {
         this.sendingStudent = false;
+        this.snackBar.open('Student został dodany do bazy', 'Zamknij' /*undefined*/, {
+          verticalPosition: 'bottom',
+          horizontalPosition: 'center',
+          duration: 5000
+        })
+
         console.log(data)
       },
       error: (error) => {

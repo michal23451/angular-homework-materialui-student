@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 import { StudentsService } from '../students-service/students-service';
 
+import { MatSnackBar } from '@angular/material/snack-bar';
+
+
 
 @Component({
   selector: 'app-students-list',
@@ -20,7 +23,7 @@ export class StudentsListComponent implements OnInit {
   ]
 
 
-  constructor(protected studentService: StudentsService) { }
+  constructor(private snackBar: MatSnackBar, protected studentService: StudentsService) { }
 
   // Component Lifecycle
   ngOnInit(): void {
@@ -32,6 +35,11 @@ export class StudentsListComponent implements OnInit {
     this.studentService.deleteFromBackend(id)
       .subscribe({
         next: (_) => {
+          this.snackBar.open('Student został usunięty z listy', 'Zamknij' /*undefined*/, {
+            verticalPosition: 'bottom',
+            horizontalPosition: 'center',
+            duration: 5000
+          })
           this.studentService.refreshStudentsList()
         },
         error: (error) => {
